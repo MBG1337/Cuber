@@ -35,7 +35,7 @@ class PlayerUtil
 
 	static function getPosition(Player $player): array
 	{
-		return array(self::getFloorX($player), self::getY($player), self::getZ($player));
+		return array(self::getFloorX($player), self::getFloorY($player), self::getFloorZ($player));
 	}
 
 	static function getFloorX(Player $player): float
@@ -43,12 +43,12 @@ class PlayerUtil
 		return $player->getPosition()->getFloorX();
 	}
 
-	static function getY(Player $player): float
+	static function getFloorY(Player $player): float
 	{
 		return $player->getPosition()->getFloorY();
 	}
 
-	static function getZ(Player $player): float
+	static function getFloorZ(Player $player): float
 	{
 		return $player->getPosition()->getFloorZ();
 	}
@@ -84,7 +84,7 @@ class PlayerUtil
 			BlockUtil::blockAroundBlock(PlayerUtil::getPosition($player), $player->getWorld(), 2, 2, 2, VanillaBlocks::COBWEB())
 			|| BlockUtil::blockAroundBlock(PlayerUtil::getPosition($player), $player->getWorld(), 1, 1, 1, VanillaBlocks::LADDER())
 			|| BlockUtil::blockUnder(self::getPosition($player), $player->getWorld())->isSameType(VanillaBlocks::WATER())
-			|| BlockUtil::noBlockAroundBlock(array(PlayerUtil::getFloorX($player), PlayerUtil::getY($player) + 2, PlayerUtil::getZ($player)), $player->getWorld(), 1, 1, 1, VanillaBlocks::AIR()));
+			|| BlockUtil::noBlockAroundBlock(array(PlayerUtil::getFloorX($player), PlayerUtil::getFloorY($player) + 2, PlayerUtil::getFloorZ($player)), $player->getWorld(), 1, 1, 1, VanillaBlocks::AIR()));
 	}
 
 	static function isJumping(Player $player): bool
