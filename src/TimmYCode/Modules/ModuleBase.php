@@ -14,7 +14,6 @@ use TimmYCode\Modules\Movement\AntiAirJump;
 use TimmYCode\Modules\Movement\AntiFly;
 use TimmYCode\Modules\Movement\AntiGlide;
 use TimmYCode\Modules\Movement\AntiHighJump;
-use TimmYCode\Modules\Movement\AntiJesus;
 use TimmYCode\Modules\Movement\AntiSpeedA;
 use TimmYCode\Modules\Movement\AntiSpeedB;
 use TimmYCode\Modules\Movement\AntiStep;
@@ -44,7 +43,6 @@ class ModuleBase
 			"AntiNoKnockback" => new AntiNoKnockback(),
 			"AntiKillaura" => new AntiKillaura(),
 			"AntiAutoClicker" => new AntiAutoClicker(),
-			"AntiJesus" => new AntiJesus(),
 			"AntiAirJump" => new AntiAirJump(),
 			"AntiFly" => new AntiFly(),
 			"AntiInventoryMove" => new AntiInventoryMove(),
