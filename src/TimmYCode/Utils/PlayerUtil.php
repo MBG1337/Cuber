@@ -35,10 +35,10 @@ class PlayerUtil
 
 	static function getPosition(Player $player): array
 	{
-		return array(self::getX($player), self::getY($player), self::getZ($player));
+		return array(self::getFloorX($player), self::getY($player), self::getZ($player));
 	}
 
-	static function getX(Player $player): float
+	static function getFloorX(Player $player): float
 	{
 		return $player->getPosition()->getFloorX();
 	}
@@ -84,7 +84,7 @@ class PlayerUtil
 			BlockUtil::blockAroundBlock(PlayerUtil::getPosition($player), $player->getWorld(), 2, 2, 2, VanillaBlocks::COBWEB())
 			|| BlockUtil::blockAroundBlock(PlayerUtil::getPosition($player), $player->getWorld(), 1, 1, 1, VanillaBlocks::LADDER())
 			|| BlockUtil::blockUnder(self::getPosition($player), $player->getWorld())->isSameType(VanillaBlocks::WATER())
-			|| BlockUtil::noBlockAroundBlock(array(PlayerUtil::getX($player), PlayerUtil::getY($player) + 2, PlayerUtil::getZ($player)), $player->getWorld(), 1, 1, 1, VanillaBlocks::AIR()));
+			|| BlockUtil::noBlockAroundBlock(array(PlayerUtil::getFloorX($player), PlayerUtil::getY($player) + 2, PlayerUtil::getZ($player)), $player->getWorld(), 1, 1, 1, VanillaBlocks::AIR()));
 	}
 
 	static function isJumping(Player $player): bool
