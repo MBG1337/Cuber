@@ -1,4 +1,4 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/timothykumm/SpyOne
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/MBG/Cuber
 build-by-default: true
 branches:
   - main
