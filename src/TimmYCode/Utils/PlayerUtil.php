@@ -40,17 +40,17 @@ class PlayerUtil
 
 	static function getX(Player $player): float
 	{
-		return $player->getPosition()->getX();
+		return $player->getPosition()->getFloorX();
 	}
 
 	static function getY(Player $player): float
 	{
-		return $player->getPosition()->getY();
+		return $player->getPosition()->getFloorY();
 	}
 
 	static function getZ(Player $player): float
 	{
-		return $player->getPosition()->getZ();
+		return $player->getPosition()->getFloorZ();
 	}
 
 	static function movementSpeedInfluenced(Player $player): bool
