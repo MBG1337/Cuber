@@ -1,9 +1,11 @@
 ---
 name: SpyOne
 main: TimmYCode\SpyOne
-version: 1.0.0
-api: 4.5.2
-author: TimmYCode
+version: 1.2.0
+api: 5.3.0
+authors: 
+- MBG
+- TimmYCodes
 
 permissions:
   spyone.ignore:
